@@ -54,13 +54,13 @@ export default class ChatClient extends React.Component {
   }
 
   componentDidMount() {
-     fetch(`http://127.0.0.1:4000/users/${this.props.name}`, {
+     fetch(`http://127.0.0.1:8080/users/${this.props.name}`, {
       method: 'PUT'
     });
   }
 
   componentWillUnmount() {
-    fetch(`http://127.0.0.1:4000/users/${this.props.name}`, {
+    fetch(`http://127.0.0.1:8080/users/${this.props.name}`, {
       method: 'DELETE'
     });
   }
@@ -69,7 +69,7 @@ export default class ChatClient extends React.Component {
     const payload = {
         message: text
     };
-    fetch(`http://127.0.0.1:4000/users/${this.props.name}/messages`, {
+    fetch(`http://127.0.0.1:8080/users/${this.props.name}/messages`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

@@ -41,6 +41,6 @@ app.post('/users/:name/messages', function(req, res) {
     res.sendStatus(204);
 });
 
-app.listen(4000, function() {
-    console.log('App listening on port 4000');
+app.listen(8080, function() {
+    console.log('App listening on port 8080');
 });
